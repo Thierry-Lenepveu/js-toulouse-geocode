@@ -77,7 +77,7 @@ export default function ProfilePhoto({
         `${import.meta.env.VITE_API_URL}/api/upload-photo/${auth?.user_id}`,
         {
           method: "PUT",
-          body: formData,
+          body: formData, 
           credentials: "include",
         },
       );
