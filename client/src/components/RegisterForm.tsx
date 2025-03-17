@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { isValidEmail } from "../types/tools.ts";
+import DOMPurify from "dompurify";
 
 type cityType = {
   nom: string;
@@ -59,6 +60,21 @@ function RegisterForm() {
 
     setEmailExists(false);
     const formData = new FormData(form);
+    formData.set(
+      "lastName",
+      DOMPurify.sanitize(formData.get("lastName") as string),
+    );
+    formData.set(
+      "firstName",
+      DOMPurify.sanitize(formData.get("firstName") as string),
+    );
+    formData.set("email", DOMPurify.sanitize(formData.get("email") as string));
+    formData.set(
+      "postalcode",
+      DOMPurify.sanitize(formData.get("postalcode") as string),
+    );
+    formData.set("city", DOMPurify.sanitize(formData.get("city") as string));
+
     response = await fetch(form.action, {
       method: "POST",
       body: formData,

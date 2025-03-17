@@ -1,3 +1,4 @@
+import DOMPurify from "dompurify";
 import { useState } from "react";
 
 function ContactForm() {
@@ -8,6 +9,12 @@ function ContactForm() {
     form?.classList.add("loading");
     event.preventDefault();
     const formData = new FormData(form);
+    formData.set("name", DOMPurify.sanitize(formData.get("name") as string));
+    formData.set("email", DOMPurify.sanitize(formData.get("email") as string));
+    formData.set(
+      "message",
+      DOMPurify.sanitize(formData.get("message") as string),
+    );
     const response = await fetch(form.action, {
       method: "POST",
       body: formData,

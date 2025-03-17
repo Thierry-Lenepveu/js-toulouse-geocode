@@ -81,13 +81,13 @@ const sendResponse = (
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
-      sameSite: "lax",
+      sameSite: "strict",
       expires: new Date(Date.now() + 3600000),
     });
     res.cookie("user_id", id, {
       httpOnly: true,
       secure: true,
-      sameSite: "lax",
+      sameSite: "strict",
       expires: new Date(Date.now() + 3600000),
     });
     res.json({
@@ -168,8 +168,6 @@ const verifyToken: RequestHandler = (req, res, next) => {
     } else {
       tokenFound = cookieObject.token;
     }
-
-    // Vérifier que l'en-tête a la forme "Bearer <token>"
 
     // Vérifier la validité du token (son authenticité et sa date d'expériation)
     // En cas de succès, le payload est extrait et décodé
