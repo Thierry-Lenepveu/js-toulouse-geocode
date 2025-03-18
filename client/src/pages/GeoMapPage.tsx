@@ -16,9 +16,9 @@ import { GeoLocationProps } from "../../../server/common/types/StationProps";
 import DisplayStation from "../components/DisplayStation";
 import QueryCity from "../components/QueryCity";
 import StationMarker from "../components/StationMarker";
-import { useGeoPositionContext } from "../contexts/GeoPositionContextProvider";
-import { useShowMenubar } from "../contexts/ShowMenubarProvider";
-import { useStationsLocationsContext } from "../contexts/StationsLocationsContextProvider";
+import { useGeoPositionContext } from "../user/contexts/GeoPositionContextProvider";
+import { useShowMenubar } from "../user/contexts/ShowMenubarProvider";
+import { useStationsLocationsContext } from "../user/contexts/StationsLocationsContextProvider";
 
 function GeoMapPage() {
   const [stationCollapsed, setStationCollapsed] = useState(true);

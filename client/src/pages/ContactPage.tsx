@@ -1,5 +1,5 @@
 import ContactForm from "../components/ContactForm";
-import { useShowMenubar } from "../contexts/ShowMenubarProvider";
+import { useShowMenubar } from "../user/contexts/ShowMenubarProvider";
 import "../styles/ContactPage.css";
 
 function ContactPage() {

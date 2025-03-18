@@ -1,5 +1,5 @@
 import RegisterForm from "../components/RegisterForm";
-import { useShowMenubar } from "../contexts/ShowMenubarProvider";
+import { useShowMenubar } from "../user/contexts/ShowMenubarProvider";
 import "../styles/RegisterPage.css";
 
 function RegisterPage() {

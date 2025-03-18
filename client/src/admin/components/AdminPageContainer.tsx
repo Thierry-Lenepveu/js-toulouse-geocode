@@ -1,4 +1,4 @@
-import { useAuth } from "../../contexts/AuthProvider";
+import { useAuth } from "../../user/contexts/AuthProvider";
 import ConnectionAdminPage from "../pages/ConnectionAdminPage";
 
 type PageContainerProps = {

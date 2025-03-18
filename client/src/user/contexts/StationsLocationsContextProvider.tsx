@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import {
   GeoLocationProps,
   StationProps,
-} from "../../../server/common/types/StationProps";
+} from "../../../../server/common/types/StationProps";
 
 interface StationLocationsContextProps {
   stationlocations: Array<StationProps>;

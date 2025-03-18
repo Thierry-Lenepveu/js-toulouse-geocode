@@ -32,10 +32,6 @@ import webSocketActions from "./modules/webSocket/webSocketActions";
 
 router.post("/api/csv", csvManagementActions.addStations);
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
-
 router.get("/api/stations/geolocation", stationActions.browseByGeoLocation);
 router.get("/api/stations/outlet/:id", outletActions.readAllByStation);
 

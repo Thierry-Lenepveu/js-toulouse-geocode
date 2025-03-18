@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import MenuBar from "./components/MenuBar";
+import MenuBar from "./user/components/MenuBar";
 
 function App() {
   return (

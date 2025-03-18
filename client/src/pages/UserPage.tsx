@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import ProfileInfo from "../components/ProfileInfo";
 import ProfileNavbar from "../components/ProfileNavbar";
-import { useShowMenubar } from "../contexts/ShowMenubarProvider";
+import { useShowMenubar } from "../user/contexts/ShowMenubarProvider";
 import "../styles/UserPage.css";
 import BookingsInfos from "../components/BookingsInfos";
 import VehiclesInfosList from "../components/VehiclesInfosList";
-import { useAuth } from "../contexts/AuthProvider";
-import { useRefresh } from "../contexts/RefreshProvider";
+import { useAuth } from "../user/contexts/AuthProvider";
+import { useRefresh } from "../user/contexts/RefreshProvider";
 
 function UserPage() {
   const [userNumberOfVehicle, setUserNumberOfVehicle] = useState<number>(0);
