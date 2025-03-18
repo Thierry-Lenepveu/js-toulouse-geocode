@@ -19,11 +19,11 @@ import GetStartedScreen from "./user/components/GetStartedScreen";
 import SecondWelcomeScreen from "./user/components/SecondWelcomeScreen";
 import UserPageContainer from "./user/components/UserPageContainer";
 import GlobalContext from "./user/contexts/GlobalContext";
-import ContactPage from "./pages/ContactPage";
-import GeoMapPage from "./pages/GeoMapPage";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import UserPage from "./pages/UserPage";
+import ContactPage from "./user/pages/ContactPage";
+import GeoMapPage from "./user/pages/GeoMapPage";
+import LoginPage from "./user/pages/LoginPage";
+import RegisterPage from "./user/pages/RegisterPage";
+import UserPage from "./user/pages/UserPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder

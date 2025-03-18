@@ -1,7 +1,7 @@
 import { useState } from "react";
 import EnterMail from "../components/EnterMail";
 import LoginForm from "../components/LoginForm";
-import { useShowMenubar } from "../user/contexts/ShowMenubarProvider";
+import { useShowMenubar } from "../contexts/ShowMenubarProvider";
 import "../styles/LoginPage.css";
 import ChangePassword from "../components/ChangePassword";
 import EnterTempCode from "../components/EnterTempCode";
